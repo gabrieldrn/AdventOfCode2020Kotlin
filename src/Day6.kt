@@ -19,12 +19,13 @@ object Day6 : AOCDay {
         return count
     }
 
-    override fun part2() : Int {
+    override fun part2(): Int {
         var count = 0
         val questions = mutableListOf<Set<Char>>()
         fun countQuestions() = with(questions) {
-            var res = first(); var i = 0
-            while (res.isNotEmpty() && ++i < count()) { res = res intersect get(i) }
+            var res = first()
+            var i = 0
+            while (res.isNotEmpty() && ++i < count()) res = res intersect get(i)
             count += res.count()
             clear()
         }
