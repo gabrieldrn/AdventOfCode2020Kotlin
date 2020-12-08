@@ -13,7 +13,7 @@ object Day4 : AOCDay {
         fun checkFields() { if (fields.containsAll(passportFields)) validPassports++ }
 
         getInput().forEachLine { line ->
-            if (line.isEmpty) {
+            if (line.isEmpty()) {
                 checkFields()
                 fields = mutableListOf()
             } else line.split(' ').forEach {
@@ -30,7 +30,7 @@ object Day4 : AOCDay {
         fun checkFields() { if (fields.areFieldsValid) validPassports++ }
 
         getInput().forEachLine { line ->
-            if (line.isEmpty) {
+            if (line.isEmpty()) {
                 checkFields()
                 fields = emptyFields //reset
             } else line.split(' ').forEach {
